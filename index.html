@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NokLok Vidya Portfolio</title>
+  <style>
+    :root {
+      --bg-color: #fff;
+      --primary-color: #000;
+      --highlight-color: #000;
+      --box-padding: 15px;
+      --box-spacing: 20px;
+      --border-width: 2px;
+      --icon-size: 80px;
+      --button-padding: 10px 20px;
+      --max-width: 1200px;
+      --mobile-padding: 10px;
+      --link-hover-color: red;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Courier New', Courier, monospace;
+      background-color: var(--bg-color);
+      color: var(--primary-color);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: var(--box-spacing);
+    }
+
+    a {
+      color: var(--primary-color);
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: var(--link-hover-color);
+    }
+
+    .container {
+      width: 100%;
+      max-width: var(--max-width);
+      text-align: center;
+      border: var(--border-width) solid var(--primary-color);
+      padding: var(--box-padding);
+    }
+
+    .header, .projects, .contact, .personal-info {
+      margin-bottom: var(--box-spacing);
+      padding: var(--box-padding);
+      border: var(--border-width) solid var(--primary-color);
+    }
+
+    h1 {
+      font-size: 2em;
+      margin-bottom: var(--box-spacing);
+      border-bottom: var(--border-width) solid var(--primary-color);
+    }
+
+    .skills-about-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      border: var(--border-width) solid var(--primary-color);
+      padding: var(--box-padding);
+      gap: var(--box-spacing);
+    }
+
+    .skills-box, .about-box {
+      flex: 1;
+      min-width: 300px;
+      border: var(--border-width) solid var(--primary-color);
+      padding: var(--box-padding);
+    }
+
+    .skills-box h2, .about-box h2 {
+      margin-bottom: 10px;
+    }
+
+    ul.skills {
+      list-style: disc inside;
+      text-align: left;
+      padding-left: 20px;
+      margin: 0 auto;
+      display: inline-block;
+      width: 100%;
+    }
+
+    .skills li {
+      font-size: 1.2em;
+      margin-bottom: 5px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: var(--button-padding);
+      background-color: var(--primary-color);
+      color: var(--bg-color);
+      text-decoration: none;
+      font-size: 1.2em;
+      margin-top: var(--box-spacing);
+      transition: 0.2s;
+    }
+
+    .button:hover {
+      background-color: var(--highlight-color);
+      transform: scale(1.05);
+    }
+
+    .projects {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: var(--box-spacing);
+    }
+
+    .project-item {
+      flex: 1;
+      min-width: 250px;
+      padding: var(--box-padding);
+      border: var(--border-width) solid var(--primary-color);
+    }
+
+    .icon-container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: var(--box-spacing);
+      margin-top: var(--box-spacing);
+    }
+
+    svg {
+      width: var(--icon-size);
+      height: var(--icon-size);
+      stroke: var(--primary-color);
+      stroke-width: 2;
+      fill: none;
+    }
+
+    /* Path doodles */
+    .doodle {
+      margin-top: var(--box-spacing);
+    }
+
+    .doodle svg {
+      width: 100%;
+      height: auto;
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 1.5em;
+      }
+
+      .skills-about-container {
+        flex-direction: column;
+      }
+
+      .skills-box, .about-box {
+        min-width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>NokLok Vidya</h1>
+
+    <div class="header">
+      <p>My products aren't just good, they're a product of passion and exquisite taste. Always made with users in mind.</p>
+    </div>
+
+    <div class="skills-about-container">
+      <div class="skills-box">
+        <h2>Skills</h2>
+        <ul class="skills">
+          <li>C/C++ (Lowend development, worked on <a href="https://www.haiku-os.org">Haiku</a>)</li>
+          <li>Lua (<a href="https://love2d.org">Love2D</a>)</li>
+          <li>Python (Scripting)</li>
+          <li>Illustrating & Pixel Art</li>
+          <li>Web and Graphic Design</li>
+          <li>Various game engines (<a href="https://unity.com">Unity</a> & <a href="https://godotengine.org">Godot</a>)</li>
+        </ul>
+      </div>
+
+      <div class="about-box">
+        <h2>Latest game (for sale)</h2>
+        <p>Witch's Frenzy is a casual game for all platforms, handwritten in Lua with handmade animations, art and mechanics. A game for all occasions with an arcade-esque design in mind. Contact me if you're interested in publishing this exquisite project.</p>
+        <a href="https://plan9.rocks" class="button">Webversion to try it out (Desktop only & Ad free)</a>
+      </div>
+    </div>
+
+    <div class="doodle">
+      <!-- Example path doodle -->
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 20">
+        <path d="M0 10 Q 25 0, 50 10 T 100 10" stroke="black" fill="none"/>
+      </svg>
+    </div>
+
+    <div class="projects">
+      <div class="project-item">
+        <h3>Project 1</h3>
+        <p>Witch's Frenzy, a videogame for desktop, mobile and web!</p>
+      </div>
+      <div class="project-item">
+        <h3>Project 2</h3>
+        <p>A screensaver for <a href="https://www.haiku-os.org">Haiku</a>, very similar to FuzzyFlakes.</p>
+      </div>
+      <div class="project-item">
+        <h3>Various others</h3>
+        <p>If you want to see more of my skills, why not contact me?</p>
+      </div>
+    </div>
+
+    <div class="personal-info">
+        <h2>Personal Info</h2>
+        <p>Legal citizen of the Netherlands, Rotterdam. Been involved with computer programming since my 14th and still learning. Open for all buiseness inquiries, freelancing or otherwise.</p>
+    </div>
+
+    <div class="contact">
+      <h2>Contact</h2>
+      <p>Email: <i>NokLokVidya@proton.me</i></p>
+      <p>Phone: <i>+31 0631183938</i></p>
+    </div>
+  </div>
+</body>
+</html>
